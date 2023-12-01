@@ -1,4 +1,4 @@
-/* ======= Шрифты START ======= */
+/* ======= Подключение шрифтов START ======= */
 @font-face {
   font-family: "RobotoCondensed-300";
   font-weight: 300;
@@ -29,7 +29,7 @@
   font-style: normal;
   src: url("../fonts/Roboto_Condensed/static/RobotoCondensed-Bold.woff") format("woff"), url("../fonts/Roboto_Condensed/static/RobotoCondensed-Bold.woff2") format("woff2");
 }
-/* ======= Шрифты END ======= */
+/* ======= Подключение шрифтов END ======= */
 
 body {
   font-family: 'RobotoCondensed-400';
@@ -784,16 +784,18 @@ footer a {
     --bs-btn-disabled-border-color: rgba(255, 255, 255, 0.5);
     --bs-gradient: none;
 }
+/* ======= Переопределение style.css END ======= */
 
+/* ======= Дополнительные стили START ======= */
 .elem-center-xxl {
   display: block;
     text-align: center;
 }
 
-@media (max-width: 960px) {
-  .elem-center {
+@media (max-width: 992px) {
+  .elem-center-lg {
     display: block;
     text-align: center;
   }
 }
-/* ======= Переопределение style.css END ======= */
+/* ======= Дополнительные стили END ======= */
