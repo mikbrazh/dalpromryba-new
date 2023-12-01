@@ -784,4 +784,11 @@ footer a {
     --bs-btn-disabled-border-color: rgba(255, 255, 255, 0.5);
     --bs-gradient: none;
 }
+
+@media (max-width: 960px) {
+  .elem-center {
+    display: block;
+    text-align: center;
+  }
+}
 /* ======= Переопределение style.css END ======= */
