@@ -829,6 +829,15 @@ footer a {
 }
 /* ======= circle-icon END ======= */
 
+.footer-logo-block {
+  text-align: center;
+}
+
+.bg-main-dark {
+  background-color: #172853 !important;
+  fill: #172853 !important;
+}
+
 @media (max-width: 992px) {
   .elem-center-lg {
     display: block;
@@ -839,8 +848,31 @@ footer a {
     font-size: .7rem;
   }
 
+  footer .row {
+    align-items: flex-start;
+  }
+  
+  footer .col {
+    align-items: flex-start;
+  }
+
+  .copyright {
+    margin-left: 0;
+  }
+
+  footer .col {
+    text-align: left;
+  }
+
   /* .elem-fs-14 {
     font-size: 14px;
   } */
 }
+
+@media (max-width: 380px) {
+  .counter-wrapper p {
+    font-size: .5rem;
+  }
+}
+
 /* ======= Дополнительные стили END ======= */
