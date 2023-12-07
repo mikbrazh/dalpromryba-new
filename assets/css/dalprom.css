@@ -879,6 +879,24 @@ h2.elem-color-white {
   fill: #172853 !important;
 }
 
+.elem-mb-0 {
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  width: 72px;
+  height: auto;
+}
+
+.navbar-brand a {
+  display: inline-block;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 992px) {
   .fs-72 {
     font-size: 2.5em !important;
