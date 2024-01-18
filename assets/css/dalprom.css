@@ -1001,5 +1001,44 @@ h2.elem-color-white {
   margin-right: 0 !important;
 }
 
+.stages-block .title-block {
+  padding: 0;
+  width: 100%;
+}
+
+.stages-block .chess-item:nth-child(even) .content-block {
+  padding-left: 85px;
+  padding-right: 0;
+}
+
+.stages-block .chess-item:nth-child(odd) .content-block {
+  padding-left: 0;
+  padding-right: 85px;
+}
+
+.production-title-block {
+  padding-left: 62px;
+}
+
+.control-title-icon {
+  margin-right: 12px;
+  color: #f9ba15;
+}
+
+/* .control-title {
+  position: relative;
+} */
+
+/* .control-title:before {
+  content: "\f4fc";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  font-family: "Font Awesome 5 Pro";
+  background-color: red;
+} */
 
 /* ======= Дополнительные стили END ======= */
