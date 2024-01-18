@@ -707,7 +707,7 @@ footer a {
 }
  */
 @media (min-width: 992px) {
-  .chess-item:nth-child(odd) .order-item {
+  .stages-block .chess-item:nth-child(odd) .order-item {
     order: 2 !important;
   }
 }
@@ -987,5 +987,19 @@ h2.elem-color-white {
     font-size: .5rem;
   }
 }
+
+.stages-block {
+  margin-bottom: 140px;
+}
+
+.stage-block {
+  margin-bottom: 70px;
+}
+
+.stages-block .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 
 /* ======= Дополнительные стили END ======= */
