@@ -1021,12 +1021,24 @@ h2.elem-color-white {
   font-size: 50px !important;
 }
 
+.color-white {
+  color: #FFFFFF !important;
+}
+
 .color-blue {
   color: #285484 !important;
 }
 
 .color-black {
   color: #0f1835 !important;
+}
+
+.bg-color-white {
+  background-color: #FFFFFF !important;
+}
+
+.bg-color-blue {
+  background-color: #285484 !important;
 }
 
 .stage-title, .control-title {
@@ -1122,6 +1134,15 @@ h2.elem-color-white {
   overflow: hidden;
 }
 
+.swiper-slide {
+  position: relative;
+  max-height: 720px;
+}
+
+.aaa {
+  display: none;
+}
+
 .stages-slider__slide {
   position: relative;
   display: -webkit-box;
@@ -1152,10 +1173,26 @@ h2.elem-color-white {
 }
 
 .stages-slider__title-block {
-  padding: 30px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 80, 139, 0.2)), to(rgba(26, 80, 139, 0.2)));
-  background-image: linear-gradient(rgba(40, 84, 132, 0.6), rgba(40, 84, 132, 0.6));
+  /* padding: 30px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
   z-index: 2;
+  /* animation: slideDown 1s ease-in-out infinite; */
+}
+
+@keyframes slideDown {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -90px;
+  }
 }
 
 .stages-slider__title {
@@ -1195,8 +1232,8 @@ h2.elem-color-white {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 18px;
-  height: 32px;
+  width: 16px;
+  height: 28px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDEuOTRMMTYuMDU5NCAwTDAgMTZMMTYuMDU5NCAzMkwxOCAzMC4wN0wzLjg5MDYyIDE2TDE4IDEuOTRaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
   background-size: cover;
   background-position: center;
@@ -1230,8 +1267,8 @@ h2.elem-color-white {
   -webkit-transform: translateY(-50%) rotate(180deg);
       -ms-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
-  width: 18px;
-  height: 32px;
+  width: 16px;
+  height: 28px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDEuOTRMMTYuMDU5NCAwTDAgMTZMMTYuMDU5NCAzMkwxOCAzMC4wN0wzLjg5MDYyIDE2TDE4IDEuOTRaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
   background-size: cover;
   background-position: center;
@@ -1241,13 +1278,14 @@ h2.elem-color-white {
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
 }
 
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
+  background-color: #285484;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
@@ -1260,11 +1298,12 @@ h2.elem-color-white {
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-  width: 85px;
-  height: 85px;
+  width: 82px;
+  height: 82px;
   background-color: #285484;
   border: none;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .stages-slider__play-button:before {
@@ -1273,14 +1312,27 @@ h2.elem-color-white {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgZmlsbD0iI0ZGRkZGRiIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgDQoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO30NCjwvc3R5bGU+DQo8cGF0aCBkPSJNOSwxOGw3LTZMOSw2VjE4eiIvPg0KPHJlY3QgY2xhc3M9InN0MCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+DQo8cmVjdCBjbGFzcz0ic3QwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4NCjwvc3ZnPg==");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   
 }
+
+.stages-slider__video-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* ======= stages-slider MEDIA START ======= */
 @media (max-width: 575.98px) {
   .stages-slider__slide {
