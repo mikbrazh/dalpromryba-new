@@ -1136,11 +1136,6 @@ h2.elem-color-white {
 
 .swiper-slide {
   position: relative;
-  max-height: 720px;
-}
-
-.aaa {
-  display: none;
 }
 
 .stages-slider__slide {
@@ -1155,7 +1150,7 @@ h2.elem-color-white {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  min-height: 788px;
+  min-height: auto;
 }
 
 .stages-slider__image {
@@ -1172,8 +1167,8 @@ h2.elem-color-white {
   z-index: -1;
 }
 
-.stages-slider__title-block {
-  /* padding: 30px 0; */
+.stages-slider__title {
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1183,6 +1178,13 @@ h2.elem-color-white {
   right: 0;
   height: 90px;
   z-index: 2;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Montserrat-500", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
   /* animation: slideDown 1s ease-in-out infinite; */
 }
 
@@ -1193,16 +1195,6 @@ h2.elem-color-white {
   to {
     bottom: -90px;
   }
-}
-
-.stages-slider__title {
-  margin-bottom: 0;
-  color: #FFFFFF;
-  text-align: center;
-  font-family: "Montserrat-500", Arial, sans-serif;
-  font-size: 22px;
-  line-height: 1;
-  text-transform: uppercase;
 }
 
 .stages-slider__button-prev {
@@ -1284,7 +1276,6 @@ h2.elem-color-white {
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  /* background-color: #FFFFFF; */
   background-color: #285484;
   border-radius: 50%;
   text-align: center;
@@ -1318,7 +1309,6 @@ h2.elem-color-white {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
 
 .stages-slider__video-poster {
@@ -1334,9 +1324,16 @@ h2.elem-color-white {
 }
 
 /* ======= stages-slider MEDIA START ======= */
+@media (max-width: 992.98px) {
+  .stages-slider__title {
+    height: 60px;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .stages-slider__slide {
-    min-height: 692px;
+    min-height: auto;
   }
   .stages-slider__title {
     line-height: 1.27;
@@ -1346,6 +1343,9 @@ h2.elem-color-white {
   }
   .stages-slider__button-next {
     right: 10px;
+  }
+  .stages-slider__title {
+    height: 40px;
   }
 }
 /* ======= stages-slider MEDIA END ======= */
