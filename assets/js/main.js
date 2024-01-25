@@ -41,13 +41,7 @@ $(document).ready(() => {
         });
         /* ======= swiper END ======= */
 
-        // Написать для всех видео
-        // Убираем полоску при проигрывании, при паузе возращаем обратно
-        // Убираем кнопку плей при проигрывании, при паузе возращаем обратно 
-        // Убираем постер при проигрывании, при паузе возращаем обратно
-        // Делаем пагинацию
-        // ПОстер на все ширину свайпера
-
+        /* ======= Custom video play button START ======= */
         const $__stagesSlides = document.querySelectorAll('.stages-slider__slide');
 
         $__stagesSlides.forEach((slide) => {
@@ -60,37 +54,46 @@ $(document).ready(() => {
             const $__sliderPlayButton = slide.querySelector('.stages-slider__play-button');
             const $__pagination = $__stagesSwiper.querySelector('.swiper-pagination');
 
+            $__sliderVideo.addEventListener('play', (event) => {
+                $__sliderVideo.controls = true;
+
+                $__sliderPoster.classList.toggle('elem--hidden');;
+                $__sliderTitle.classList.toggle('elem--hidden');;
+                $__sliderButtonPrev.classList.toggle('elem--hidden');;
+                $__sliderButtonNext.classList.toggle('elem--hidden');;
+                $__sliderPlayButton.classList.toggle('elem--hidden');;
+                $__pagination.classList.toggle('elem--hidden');;
+            });
+
+            $__sliderVideo.addEventListener('pause', (event) => {
+                $__sliderVideo.controls = false;
+
+                $__sliderPoster.classList.toggle('elem--hidden');;
+                $__sliderTitle.classList.toggle('elem--hidden');;
+                $__sliderButtonPrev.classList.toggle('elem--hidden');;
+                $__sliderButtonNext.classList.toggle('elem--hidden');;
+                $__sliderPlayButton.classList.toggle('elem--hidden');;
+                $__pagination.classList.toggle('elem--hidden');;
+            });
+
+            $__sliderVideo.addEventListener('ended', (event) => {
+                $__sliderVideo.controls = false;
+
+                $__sliderPoster.classList.toggle('elem--hidden');;
+                $__sliderTitle.classList.toggle('elem--hidden');;
+                $__sliderButtonPrev.classList.toggle('elem--hidden');;
+                $__sliderButtonNext.classList.toggle('elem--hidden');;
+                $__sliderPlayButton.classList.toggle('elem--hidden');;
+                $__pagination.classList.toggle('elem--hidden');;
+            });
+
             slide.addEventListener('click', (event) => {
-                if (event.target == $__sliderPlayButton && $__sliderVideo.paused == true) {
+                if (event.target == $__sliderPlayButton) {
                     $__sliderVideo.play();
-
-                    $__sliderVideo.controls = true;
-
-                    $__sliderPoster.style.display = 'none';
-                    $__sliderTitle.style.display = 'none';
-                    $__sliderButtonPrev.style.display = 'none';
-                    $__sliderButtonNext.style.display = 'none';
-                    $__sliderPlayButton.style.display = 'none';
-                    $__pagination.style.display = 'none';
-
-
-                    $__sliderVideo.addEventListener('ended', (event) => {
-                        $__sliderPoster.style.display = 'block';
-                        $__sliderTitle.style.display = 'flex';
-                        $__sliderButtonPrev.style.display = 'block';
-                        $__sliderButtonNext.style.display = 'block';
-                        $__sliderPlayButton.style.display = 'block';
-                        $__pagination.style.display = 'block';
-                    }, false);
-                } else {
-                    $__sliderVideo.pause();
-                    $__sliderVideo.controls = false;
-                    $__sliderButtonPrev.style.display = 'block';
-                    $__sliderButtonNext.style.display = 'block';
-                    $__sliderPlayButton.style.display = 'block';
                 }
-            }, false);
+            });
         });
+        /* ======= Custom video play button END ======= */
     }
+    /* ======= stages-slider END ======= */
 });
-/* ======= stages-slider END ======= */
