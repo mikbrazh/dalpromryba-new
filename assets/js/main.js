@@ -3,7 +3,11 @@ function scrollProduct() {
     $('body,html').animate({ scrollTop: offsetTop }, 1000);
 }
 
-$(document).ready(() => {
+// $(document).ready(() => {
+// });
+
+(function() {
+    
     /* ======= stages-slider START ======= */
     if (document.querySelector('.stages-slider')) {
 
@@ -73,7 +77,7 @@ $(document).ready(() => {
 
             $__sliderVideo.addEventListener('pause', (event) => {
                 $__sliderVideo.controls = false;
-               
+                
                 if ($__stagesSwiper.classList.contains('stages-sprats-swiper')) {
                     stagesSpratsSwiper.enable();
                 }
@@ -103,4 +107,5 @@ $(document).ready(() => {
         /* ======= Custom video play button END ======= */
     }
     /* ======= stages-slider END ======= */
-});
+
+})();
